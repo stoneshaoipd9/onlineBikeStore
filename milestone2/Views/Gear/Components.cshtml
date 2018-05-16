@@ -1,0 +1,18 @@
+﻿@model IEnumerable<milestone2.ProductCategory>
+
+@{
+    ViewBag.Title = "Components";
+}
+
+<h4>Components</h4>
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="border: 1px solid black">@Html.ActionLink(item.Name, "Details", new { id = item.ProductCategoryID })</td>
+        </tr>
+    }
+
+</table>

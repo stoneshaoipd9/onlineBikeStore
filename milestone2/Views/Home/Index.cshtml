@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    h2 {
+        position: relative;
+        animation-name: example;
+        animation-duration: 8s;
+    }
+
+    @@keyframes example {
+    0%   {color:red; left:0px; top:0px;}
+    25%  {color:yellow; left:55%; top:0px;}
+    50%  {color:pink; left:0px; top:0px;}
+    75%  {color:green; left:55%; top:0px;}
+    100% {color:blue; left:0px; top:0px;}
+    }
+</style>
+<h2 style="font-weight:bold; color:darkblue">Welcome to Ultimate Cycling Center</h2>
+<hr />
+<div>
+    <img src="~/images/home.jpg" alt="Home" style="width:100%"/>
+</div>

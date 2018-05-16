@@ -1,0 +1,20 @@
+﻿@model IEnumerable<milestone2.ProductCategory>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ultimate Cycling Center</h2>
+<h4 style="font-style:italic">Browser our bike models</h4>
+
+<table class="table">
+    <tr>
+        @foreach (var item in Model)
+        {
+            <td>@Html.ActionLink(item.Name, item.Name.Substring(0, item.Name.IndexOf(' ')))</td>
+        }
+    </tr>
+</table>
+
+
+

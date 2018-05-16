@@ -1,0 +1,52 @@
+﻿@model IEnumerable<milestone2.Product>
+@{
+    ViewBag.Title = "Details";
+}
+
+<h4 style="font-style:italic">Product Details</h4>
+
+<table class="table">
+    <tr style="border: 1px solid black; font-weight:bold; background-color:gray">
+        <td>Name</td>
+        <td>ProductNumber</td>
+        <td>Color</td>
+        <td>ListPrice</td>
+        <td>Size</td>
+        <td>Weight</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr style="border: 1px solid black">
+            <td>@item.Name</td>
+            <td>@item.ProductNumber</td>
+            @if (item.Color == null)
+            {
+                <td>N/A</td>
+            }
+            else
+            {
+                <td>@item.Color</td>
+            }
+            <td>@item.ListPrice.ToString("c")</td>
+            @if (item.Size == null)
+            {
+                <td>N/A</td>
+            }
+            else
+            {
+                <td>@item.Size</td>
+            }
+            @if (item.Weight == null)
+            {
+                <td>N/A</td>
+            }
+            else
+            {
+                <td>@item.Weight</td>
+            }
+           
+        </tr>
+    }
+
+</table>
